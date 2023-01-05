@@ -1,0 +1,400 @@
+:root {  
+--clr-Red: hsl(0, 100%, 68%);
+--clr-Very-Dark-Blue: hsl(230, 29%, 20%);
+--clr-Dark-Grayish-Blue: hsl(230, 11%, 40%);
+--clr-Grayish-Blue: hsl(231, 7%, 65%);
+--clr-Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    font-family: barlow condensed, sans-serif;
+    font-size: 18px;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 55%;
+    width: 50%;
+    border-radius: 0px 0px 0px 55px;
+    background-color: var(--clr-Light-Grayish-Blue);
+    z-index: -1;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 16px;
+    max-width: 500px;
+    color: var(--clr-Very-Dark-Blue);
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 500;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-top: 56px;
+    color: var(--clr-Dark-Grayish-Blue);
+}
+
+.content-info-footer {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    background-color: var(--clr-Red);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    margin-right: 18px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+a:hover {
+    opacity: 0.65;
+}
+
+.span-button {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2.5px;
+    color: var(--clr-Grayish-Blue);
+}
+
+main {
+    width: 100%;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    padding: 40px 30px;
+    margin-bottom: 12px;
+    color: var(--clr-Dark-Grayish-Blue);
+}
+
+.logo {
+    height: 25px;
+}
+
+p {
+    font-family: barlow, sans-serif;
+    margin-top: 16px;
+    font-size: 18.5px;
+    max-width: 280px;
+    line-height: 25px;
+}
+
+nav {
+    position: absolute;
+    top: -260px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    box-shadow: 0px 15px 20px 5px rgba(0,0,0,0.2);
+    width: 85%;
+    height: 230px;
+    background-color: white;
+    transition: all 0.35s ease-in-out;
+    z-index: 1;
+}
+
+nav.active {
+    top: 100px;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 18.5px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 20px;
+    color: var(--clr-Very-Dark-Blue);
+}
+
+li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+li::after {
+    content: '';
+    top: 22px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-Very-Dark-Blue);
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+    transform: scale(0%);
+}
+
+hr {
+    width: 100%;
+    border-width: 0.5px;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.li-login {
+    color: var(--clr-Grayish-Blue);
+}
+.li-login::after {
+    background-color: var(--clr-Grayish-Blue);
+}
+
+li:hover::after {
+    transform: scale(100%);
+}
+
+.hamburger {
+    cursor: pointer;
+}
+/* ***************** */
+.close-btn-img {
+    display: none;
+}
+
+.hamburger-img {
+    display: block;
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.content-info {
+    padding: 30px;
+}
+
+.span-new {
+    color: white;
+    background-color: var(--clr-Very-Dark-Blue);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    padding: 3px 12px;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+
+.content-image-container {
+    overflow: hidden;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.device-img {
+    width: 137%;
+    height: 137%;
+    object-fit: contain;
+    display: block;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .device-img {
+        width: 100%;
+        height: 100%;
+        transform: translateX(0%);
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    header {
+        margin-bottom: 64px;
+    }
+
+    .content-info {
+        padding-left: 64px;
+    }
+
+    .content {
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+}
+
+
+@media only screen and (min-width: 920px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items:stretch;
+    }
+
+    .device-img {
+        transform: translateX(-5.5%);
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    h1 {
+        font-size: 64px;
+        line-height: 64px;
+        margin: 22px 0px 0px 0px;
+    }
+
+    h2 {
+        margin: 52px 0px 0px 0px;
+    }
+
+    p {
+        margin-top: 32px;
+    }
+
+    header {
+        margin-bottom: 50px; 
+        padding: 50px 150px ;
+    }
+
+    nav {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        width: fit-content;
+        height: auto;
+        margin: 0;
+        display: flex;
+    }
+
+    ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        padding: 20px;
+        color: var(--clr-Very-Dark-Blue); 
+    }
+
+    li {
+        margin-left: 32px;
+    }
+
+    hr {
+        border: 3px solid rgb(160, 161, 172, 0.5);
+        border-radius: 50%;
+        margin-left: 32px;
+    }
+
+    .device-img {
+        min-height: 464px;
+        min-width: 960px;
+    }
+
+    .content {
+        flex-direction: row;
+        justify-content: right;
+        padding-bottom: 16px;
+    }
+
+    .content-info {
+        flex: 1;
+        padding: 0px 0px 0px 150px;
+
+    }
+
+    .content-image-container {
+        flex: 1;
+    }
+
+    main {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .content-info-footer {
+        margin-top: 64px;
+    }
+
+    a {
+        font-size: 16px;
+        letter-spacing: 1.2px;
+        margin-right: 24px;
+        padding: 15px 32px;
+    }
+
+    .span-button {
+        font-size: 16.2px;
+        letter-spacing: 4.5px;
+    }
+
+    .logo {
+        height: auto;
+    }
+}
+
+/* for mobile width less than 350px */
+
+@media only screen and (max-width: 350px){
+
+    p {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2,
+    h3,
+    .span-button,
+    .span-new,
+    a {
+        font-size: 11px;
+    }
+
+    .content-info {
+        padding-right: 12px;
+        padding-left: 15px;
+    }
+
+    a {
+        padding: 10px 15px;
+    }
+
+    header {
+        padding: 30px 20px;
+    }
+}
+
+
+
+
+
