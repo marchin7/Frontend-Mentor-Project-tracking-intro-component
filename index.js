@@ -9,8 +9,7 @@ menuBtns.addEventListener("click", () => {
     if (nav.classList.contains("active")) {
         hamburger.classList.add("active");
         closeBtn.classList.add("active");
-    } 
-    else {
+    } else {
         hamburger.classList.remove("active");
         closeBtn.classList.remove("active");
     }
