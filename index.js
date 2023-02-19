@@ -1,17 +1,17 @@
-const nav = document.getElementById('nav');
-const hamburger = document.getElementById('hamburger');
-const hamburgerImg = document.getElementById('hamburger-img');
-const closeBtn = document.getElementById('close-btn-img');
+const nav = document.getElementById("nav");
+const menuBtns = document.getElementById("menu-btns");
+const hamburger = document.getElementById("hamburger");
+const closeBtn = document.getElementById("close-menu-btn");
 
-hamburger.addEventListener('click', ()=>{
-    nav.classList.toggle('active');
+menuBtns.addEventListener("click", () => {
+    nav.classList.toggle("active");
 
-    if(nav.classList.contains('active')){
-        hamburgerImg.style.display = 'none';
-        closeBtn.style.display = 'flex';
-    }
-    else {;
-        hamburgerImg.style.display = 'flex'
-        closeBtn.style.display = 'none';
+    if (nav.classList.contains("active")) {
+        hamburger.classList.add("active");
+        closeBtn.classList.add("active");
+    } 
+    else {
+        hamburger.classList.remove("active");
+        closeBtn.classList.remove("active");
     }
 });
